@@ -1,13 +1,75 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="blue-theme">
+
 <head>
-  <meta charset="utf-8">
-  <title>EmailBook</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <title>EmailBook</title>
+    <base href="/">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="company-email-book" content="yes">
+    <meta name="company-email-book-and-directory" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+
+    <!-- Material design icons CSS -->
+    <link rel="stylesheet" href="assets/vendor/materializeicon/material-icons.css">
+
+    <!-- Roboto fonts CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/vendor/bootstrap-4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link href="assets/vendor/swiper/css/swiper.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- <link rel="manifest" href="_manifest.json"> -->
+
+
 </head>
+
 <body>
-  <app-root></app-root>
+    <app-root></app-root>
+
+    <!-- jquery, popper and bootstrap js -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap-4.4.1/js/bootstrap.min.js"></script>
+    <!-- cookie js -->
+    <script src="assets/vendor/cookie/jquery.cookie.js"></script>
+
+    <!-- swiper js -->
+    <script src="assets/vendor/swiper/js/swiper.min.js"></script>
+
+    <!-- template custom js -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- page level script -->
+    <script>
+        $(window).on('load', function() {
+            var swiper = new Swiper('.introduction', {
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
+
+            /* notification view and hide */
+            setTimeout(function() {
+                $('.notification').addClass('active');
+                setTimeout(function() {
+                    $('.notification').removeClass('active');
+                }, 3500);
+            }, 500);
+            $('.closenotification').on('click', function() {
+                $(this).closest('.notification').removeClass('active')
+            });
+        });
+    </script>
 </body>
+
 </html>

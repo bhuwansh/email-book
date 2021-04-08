@@ -1,0 +1,309 @@
+<app-head-menu></app-head-menu>
+
+<div class="wrapper">
+    <div class="header">
+        <div class="row no-gutters">
+            <div class="col-auto">
+                <button class="btn  btn-link text-dark menu-btn"><img src="assets/img/menu.png" alt=""><span class="new-notification"></span></button>
+            </div>
+            <div class="col text-center"><img src="assets/img/logo-header.png" alt="" class="header-logo"></div>
+            <div class="col-auto">
+                <a routerLink='/company' class="btn  btn-link text-dark"><i class="material-icons">account_circle</i></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <input type="text" class="form-control form-control-lg search my-3" placeholder="Search">
+
+        <h6 class="subtitle">Categories</h6>
+
+
+
+        <div class="row">
+            <!-- Swiper -->
+            <div class="swiper-container news-slide swiper-container-horizontal">
+                <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-228px, 0px, 0px);">
+                    <div class="swiper-slide swiper-slide-prev" style="width: 228px;">
+                        <div class="card shadow-sm border-0 bg-dark text-white">
+                            <figure class="background" style="background-image: url(&quot;img/fresh-orange-juice.jpg&quot;);">
+
+                            </figure>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
+                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
+                                <p class="text-mute small">By Anand Mangal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active" style="width: 228px;">
+                        <div class="card shadow-sm border-0 bg-dark text-white">
+                            <figure class="background" style="background-image: url(&quot;img/orange-juice.jpg&quot;);">
+
+                            </figure>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
+                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
+                                <p class="text-mute small">By Anand Mangal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next" style="width: 228px;">
+                        <div class="card shadow-sm border-0 bg-dark text-white">
+                            <figure class="background" style="background-image: url(&quot;img/fresh-orange-juice.jpg&quot;);">
+
+                            </figure>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
+                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
+                                <p class="text-mute small">By Anand Mangal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="width: 228px;">
+                        <div class="card shadow-sm border-0 bg-dark text-white">
+                            <figure class="background" style="background-image: url(&quot;img/orange-juice.jpg&quot;);">
+
+                            </figure>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
+                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
+                                <p class="text-mute small">By Anand Mangal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="width: 228px;">
+                        <div class="card shadow-sm border-0 bg-dark text-white">
+                            <figure class="background" style="background-image: url(&quot;img/fresh-orange-juice.jpg&quot;);">
+
+                            </figure>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
+                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
+                                <p class="text-mute small">By Anand Mangal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="width: 228px;">
+                        <div class="card shadow-sm border-0 bg-dark text-white">
+                            <figure class="background" style="background-image: url(&quot;img/orange-juice.jpg&quot;);">
+
+                            </figure>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
+                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
+                                <p class="text-mute small">By Anand Mangal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+
+
+
+        <h6 class="subtitle">Companies Email List </h6>
+        <div class="row">
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2" *ngFor="let x of Emails">
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body">
+                        <button class="btn btn-sm btn-link p-0"><i class="material-icons md-18">business </i></button>
+                        <div class="badge badge-primary float-right mt-1"><strong>{{x.category}}</strong></div>
+                        <figure class="product-image"><img src="{{x.logo}}" alt="" class=""></figure>
+                        <a href="{{x.website}}" target="_blank" class="text-dark mb-1 mt-2 h6 d-block">{{x.companyname}} </a>
+                        <p class="text-secondary small mb-2">{{x.companyDetails}}</p>
+                        <h5 class="text-success font-weight-normal mb-0">{{x.location}}</h5>
+                        <!-- <p class="text-secondary small text-mute mb-0">Send your CV / Email</p> -->
+                        <a href="mailto:{{x.email}}" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">markunread</i></a>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid bg-warning text-white my-3">
+        <div class="row">
+            <div class="container">
+                <div class="row  py-4 ">
+                    <div class="col">
+                        <h1 class="text-uppercase mb-3">20% OFF Season Sale</h1>
+                        <p class="mb-3">Use Coupan Code<br><span class="text-dark">DFR0020</span></p>
+                    </div>
+                    <div class="col-5 col-md-3 col-lg-2 col-xl-2">
+                        <img src="assets/img/banana.png" alt="" class="mw-100 mt-3">
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col">
+                        <p>Get the all new fresh bananas at very low price</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h6 class="subtitle">Are you looking for:</h6>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-lg btn-light btn-rounded shadow-xs my-1 mr-2">Fresh</button>
+                <button class="btn btn-lg btn-light btn-rounded shadow-xs my-1 mr-2">$100 - $299</button>
+                <button class="btn btn-lg btn-light btn-rounded shadow-xs my-1 mr-2">600+</button>
+                <button class="btn btn-lg btn-light btn-rounded shadow-xs my-1 mr-2">$300 - $599</button>
+                <button class="btn btn-lg btn-light btn-rounded shadow-xs my-1 mr-2">Deliver Today</button>
+            </div>
+        </div>
+        <h6 class="subtitle">News Updates</h6>
+        <div class="row">
+            <!-- Swiper -->
+            <div class="swiper-container news-slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card shadow-sm border-0 bg-dark text-white">
+                            <figure class="background">
+                                <img src="assets/imgfresh-orange-juice.jpg" alt="">
+                            </figure>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
+                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
+                                <p class="text-mute small">By Anand Mangal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card shadow-sm border-0 bg-dark text-white">
+                            <figure class="background">
+                                <img src="assets/imgorange-juice.jpg" alt="">
+                            </figure>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
+                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
+                                <p class="text-mute small">By Anand Mangal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card shadow-sm border-0 bg-dark text-white">
+                            <figure class="background">
+                                <img src="assets/imgfresh-orange-juice.jpg" alt="">
+                            </figure>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
+                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
+                                <p class="text-mute small">By Anand Mangal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card shadow-sm border-0 bg-dark text-white">
+                            <figure class="background">
+                                <img src="assets/imgorange-juice.jpg" alt="">
+                            </figure>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
+                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
+                                <p class="text-mute small">By Anand Mangal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card shadow-sm border-0 bg-dark text-white">
+                            <figure class="background">
+                                <img src="assets/imgfresh-orange-juice.jpg" alt="">
+                            </figure>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
+                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
+                                <p class="text-mute small">By Anand Mangal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card shadow-sm border-0 bg-dark text-white">
+                            <figure class="background">
+                                <img src="assets/imgorange-juice.jpg" alt="">
+                            </figure>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
+                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
+                                <p class="text-mute small">By Anand Mangal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-3">
+        <div class="row">
+            <div class="col text-center">
+                <h5 class="subtitle mb-1">Most Exciting Feature</h5>
+                <p class="text-secondary">Take a look at our services</p>
+            </div>
+        </div>
+        <div class="row text-center mt-4">
+            <div class="col-6 col-md-3">
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body">
+                        <i class="material-icons mb-4 md-36 text-template">card_giftcard</i>
+                        <h2>2546</h2>
+                        <p class="text-secondary text-mute">Gift it out</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body">
+                        <i class="material-icons mb-4 md-36 text-template">subscriptions</i>
+                        <h2>635</h2>
+                        <p class="text-secondary text-mute">Monthly Billed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body">
+                        <i class="material-icons mb-4 md-36 text-template">local_florist</i>
+                        <h2>1542</h2>
+                        <p class="text-secondary text-mute">Eco environment</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body">
+                        <i class="material-icons mb-4 md-36 text-template">location_city</i>
+                        <h2>154</h2>
+                        <p class="text-secondary text-mute">Four Offices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<app-footer-menu></app-footer-menu>
+
+<!-- notification -->
+<div class="notification bg-white shadow border-primary">
+    <div class="row">
+        <div class="col-auto align-self-center pr-0">
+            <i class="material-icons text-primary md-36">fullscreen</i>
+        </div>
+        <div class="col">
+            <h6>Viewing in Phone?</h6>
+            <p class="mb-0 text-secondary">Double tap to enter into fullscreen mode for each page.</p>
+        </div>
+        <div class="col-auto align-self-center pl-0">
+            <button class="btn btn-link closenotification"><i class="material-icons text-secondary text-mute md-18 ">close</i></button>
+        </div>
+    </div>
+</div>
+<!-- notification ends -->

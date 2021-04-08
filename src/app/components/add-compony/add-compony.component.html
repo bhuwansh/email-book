@@ -1,0 +1,403 @@
+<!-- <div class="row no-gutters vh-100 loader-screen">
+    <div class="col align-self-center text-white text-center">
+        <img src="assets/img/logo.png" alt="logo">
+        <h1><span class="font-weight-light">Go</span>Fruit</h1>
+        <div class="laoderhorizontal">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div> -->
+<div class="wrapper">
+    <div class="header">
+        <div class="row no-gutters">
+            <div class="col-auto">
+                <a href="javascript:void(0)" onClick="javascript:history.go(-1)" class="btn  btn-link text-dark"><i class="material-icons">navigate_before</i></a>
+            </div>
+            <div class="col text-center"><img src="assets/img/logo-header.png" alt="" class="header-logo"></div>
+            <div class="col-auto">
+                <a href="profile.html" class="btn  btn-link text-dark"><i class="material-icons">account_circle</i></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-center">
+            <div class="figure-profile shadow my-4">
+                <figure><img src="assets/img/user1.png" alt=""></figure>
+                <div class="btn btn-dark text-white floating-btn">
+                    <i class="material-icons">camera_alt</i>
+                    <input type="file" class="float-file">
+                </div>
+            </div>
+        </div>
+
+
+        <form class="example-form" autocomplete="off" formGroup="companyForm" (ngSubmit)="submitCompanyData()">
+
+            <h6 class="subtitle">Company Information</h6>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="form-group float-label active">
+                        <input type="text" formControlName="CompanyName" class="form-control" required="" value="">
+                        <label class="form-control-label">Company Name</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="form-group float-label active">
+                        <input type="email" class="form-control" formControlName="CompanyEmail" required="" value="">
+                        <label class="form-control-label">Comapony Email</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="form-group float-label active">
+                        <input type="url" class="form-control" formControlName="website" required="" value="">
+                        <label class="form-control-label">website / url</label>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-6">
+                    <div class="form-group float-label active">
+                        <input type="url" class="form-control" formControlName="logo" required="" value="">
+                        <label class="form-control-label">Logo Image Link</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <h6 class="subtitle">Details</h6>
+
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="form-group float-label active">
+                        <input type="tel" class="form-control" formControlName="phone" required="" value="">
+                        <label class="form-control-label">Phone Number</label>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="form-group float-label active">
+                        <select class="form-control" formControlName="Industry">
+                       <option value="0" selected > Select Company type </option>
+                       <option> AGRICULTURE AND ALLIED INDUSTRIES                       </option>                  
+                       <option> AUTOMOBILES</option>
+                       <option> AUTO COMPONENTS</option>
+                       <option> AVIATION</option>
+                       <option> BANKING</option>
+                       <option> BIOTECHNOLOGY</option>
+                       <option> CEMENT</option>
+                       <option> CHEMICALS</option>
+                       <option> CONSUMER DURABLES</option>
+                       <option> DEFENCE MANUFACTURING</option>
+                       <option> E-COMMERCE</option>
+                       <option> EDUCATION AND TRAINING</option>
+                       <option> ELECTRONICS SYSTEM DESIGN & MANUFACTURING</option>
+                       <option> ENGINEERING AND CAPITAL GOODS</option>
+                       <option> FINANCIAL SERVICES</option>
+                       <option> FMCG</option>
+                       <option> GEMS AND JEWELLERY</option>
+                       <option> HEALTHCARE</option>
+                       <option> INFRASTRUCTURE</option>
+                       <option> INSURANCE</option>
+                       <option> IT & BPM</option>
+                       <option> MANUFACTURING</option>
+                       <option> MEDIA AND ENTERTAINMENT</option>
+                       <option> MEDICAL DEVICES</option>
+                       <option> METALS AND MINING</option>
+                       <option> MSME</option>
+                       <option> OIL AND GAS</option>
+                       <option> PHARMACEUTICALS</option>
+                       <option> PORTS</option>
+                       <option> POWER</option>
+                       <option> RAILWAYS</option>
+                       <option> REAL ESTATE</option>
+                       <option> RENEWABLE ENERGY</option>
+                       <option> RETAIL</option>
+                       <option> ROADS</option>
+                       <option> SCIENCE AND TECHNOLOGY</option>
+                       <option> SERVICES</option>
+                       <option> STEEL</option>
+                       <option> TELECOMMUNICATIONS</option>
+                       <option> TEXTILES</option>
+                       <option> TOURISM AND HOSPITALITY</option>
+
+  </select>
+                        <label class="form-control-label">Industries / Companies</label>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="form-group float-label active">
+                        <select class="form-control" formControlName="location">
+<option value="0" selected>select Country / Location</option>
+<option>Afghanistan</option>
+<option>Albania                 </option>
+<option>Algeria</option>
+<option>Andorra</option>
+<option>Angola</option>
+<option>Antigua and Barbuda</option>
+<option>Argentina</option>
+<option>Armenia</option>
+<option>Australia</option>
+<option>Austria</option>
+<option>Austrian Empire</option>
+<option>Azerbaijan</option>
+<option>Baden*                          </option>
+<option>Bahamas, The</option>
+<option>Bahrain</option>
+<option>Bangladesh</option>
+<option>Barbados</option>
+<option>Bavaria*</option>
+<option>Belarus</option>
+<option>Belgium</option>
+<option>Belize</option>
+<option>Benin (Dahomey)</option>
+<option>Bolivia</option>
+<option>Bosnia and Herzegovina</option>
+<option>Botswana</option>
+<option>Brazil</option>
+<option>Brunei</option>
+<option>Brunswick and Lüneburg</option>
+<option>Bulgaria</option>
+<option>Burkina Faso (Upper Volta)</option>
+<option>Burma</option>
+<option>Burundi</option>
+<option>Cabo Verde                              </option>
+<option>Cambodia</option>
+<option>Cameroon</option>
+<option>Canada</option>
+<option>Cayman Islands, The</option>
+<option>Central African Republic</option>
+<option>Central American Federation*</option>
+<option>Chad</option>
+<option>Chile</option>
+<option>China</option>
+<option>Colombia</option>
+<option>Comoros</option>
+<option>Congo Free State, The</option>
+<option>Costa Rica</option>
+<option>Cote d’Ivoire (Ivory Coast)</option>
+<option>Croatia</option>
+<option>Cuba</option>
+<option>Cyprus</option>
+<option>Czechia</option>
+<option>Czechoslovakia</option>
+<option>Democratic Republic of the Congo</option>
+<option>Denmark</option>
+<option>Djibouti</option>
+<option>Dominica</option>
+<option>Dominican Republic</option>
+<option>Duchy of Parma, The*</option>
+<option>East Germany (German Democratic Republic)</option>
+<option>Ecuador</option>
+<option>Egypt</option>
+<option>El Salvador</option>
+<option>Equatorial Guinea</option>
+<option>Eritrea</option>
+<option>Estonia</option>
+<option>Eswatini</option>
+<option>Ethiopia</option>
+<option>Federal Government of Germany (1848-49)*</option>
+<option>Fiji</option>
+<option>Finland</option>
+<option>France</option>
+<option>Gabon                           </option>
+<option>Gambia, The</option>
+<option>Georgia</option>
+<option>Germany</option>
+<option>Ghana</option>
+<option>Grand Duchy of Tuscany, The*</option>
+<option>Greece</option>
+<option>Grenada</option>
+<option>Guatemala</option>
+<option>Guinea</option>
+<option>Guinea-Bissau</option>
+<option>Guyana</option>
+<option>Haiti                       </option>
+<option>Hanover*</option>
+<option>Hanseatic Republics*</option>
+<option>Hawaii*</option>
+<option>Hesse*</option>
+<option>Holy See</option>
+<option>Honduras</option>
+<option>Hungary</option>
+<option>Iceland                                   </option>                          
+<option>India</option>
+<option>Indonesia</option>
+<option>Iran</option>
+<option>Iraq</option>
+<option>Ireland</option>
+<option>Israel</option>
+<option>Italy</option>
+<option>Jamaica</option>
+<option>Japan</option>
+<option>Jordan</option>
+<option>Kazakhstan</option>
+<option>Kenya</option>
+<option>Kingdom of Serbia/Yugoslavia*</option>
+<option>Kiribati</option>
+<option>Korea</option>
+<option>Kosovo</option>
+<option>Kuwait</option>
+<option>Kyrgyzstan</option>
+<option>Laos</option>
+<option>Latvia</option>
+<option>Lebanon</option>
+<option>Lesotho</option>
+<option>Lew Chew (Loochoo)*</option>
+<option>Liberia</option>
+<option>Libya</option>
+<option>Liechtenstein</option>
+<option>Lithuania</option>
+<option>Luxembourg</option>
+
+<option>Madagascar</option>
+<option>Malawi</option>
+<option>Malaysia</option>
+<option>Maldives</option>
+<option>Mali</option>
+<option>Malta</option>
+<option>Marshall Islands</option>
+<option>Mauritania</option>
+<option>Mauritius</option>
+<option>Mecklenburg-Schwerin*</option>
+<option>Mecklenburg-Strelitz*</option>
+<option>Mexico</option>
+<option>Micronesia</option>
+<option>Moldova</option>
+<option>Monaco</option>
+<option>Mongolia</option>
+<option>Montenegro</option>
+<option>Morocco</option>
+<option>Mozambique</option>
+
+<option>Namibia</option>
+<option>Nassau*</option>
+<option>Nauru</option>
+<option>Nepal</option>
+<option>Netherlands, The</option>
+<option>New Zealand</option>
+<option>Nicaragua</option>
+<option>Niger</option>
+<option>Nigeria</option>
+<option>North German Confederation*</option>
+<option>North German Union*</option>
+<option>North Macedonia</option>
+<option>Norway</option>
+
+<option>Oldenburg*</option>
+<option>Oman</option>
+<option>Orange Free State*</option>
+
+<option>Pakistan</option>
+<option>Palau</option>
+<option>Panama</option>
+<option>Papal States*</option>
+<option>Papua New Guinea</option>
+<option>Paraguay</option>
+<option>Peru</option>
+<option>Philippines</option>
+<option>Piedmont-Sardinia*</option>
+<option>Poland</option>
+<option>Portugal</option>
+
+<option>Qatar</option>
+
+<option>Republic of Genoa*</option>
+<option>Republic of Korea (South Korea)</option>
+<option>Republic of the Congo</option>
+<option>Romania</option>
+<option>Russia</option>
+<option>Rwanda</option>
+
+<option>Saint Kitts and Nevis</option>
+<option>Saint Lucia</option>
+<option>Saint Vincent and the Grenadines</option>
+<option>Samoa</option>
+<option>San Marino</option>
+<option>Sao Tome and Principe</option>
+<option>Saudi Arabia</option>
+<option>Schaumburg-Lippe*</option>
+<option>Senegal</option>
+<option>Serbia</option>
+<option>Seychelles</option>
+<option>Sierra Leone</option>
+<option>Singapore</option>
+<option>Slovakia</option>
+<option>Slovenia</option>
+<option>Solomon Islands, The</option>
+<option>Somalia</option>
+<option>South Africa</option>
+<option>South Sudan</option>
+<option>Spain</option>
+<option>Sri Lanka</option>
+<option>Sudan</option>
+<option>Suriname</option>
+<option>Sweden</option>
+<option>Switzerland</option>
+<option>Syria</option>
+
+<option>Tajikistan</option>
+<option>Tanzania</option>
+<option>Texas*</option>
+<option>Thailand</option>
+<option>Timor-Leste</option>
+<option>Togo</option>
+<option>Tonga</option>
+<option>Trinidad and Tobago</option>
+<option>Tunisia</option>
+<option>Turkey</option>
+<option>Turkmenistan</option>
+<option>Tuvalu</option>
+<option>Two Sicilies*</option>
+
+<option>Uganda</option>
+<option>Ukraine</option>
+<option>Union of Soviet Socialist Republics*</option>
+<option>United Arab Emirates, The</option>
+<option>United Kingdom, The</option>
+<option>Uruguay</option>
+<option>Uzbekistan</option>
+
+<option>Vanuatu</option>
+<option>Venezuela</option>
+<option>Vietnam</option>
+
+<option>Württemberg*</option>
+
+<option>Yemen</option>
+
+<option>Zambia</option>
+<option>Zimbabwe</option>
+
+  </select>
+                        <label class="form-control-label">Select Country</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="col-12">
+                    <div class="form-group float-label active">
+                        <input type="textarea" class="form-control" required="" formControlName="companydetails" style="min-height: 100px;" value="">
+                        <label class="form-control-label">Company Details</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- [disabled]="!companyForm.valid" -->
+            <button type="submit" class="btn btn-lg btn-default text-white btn-block btn-rounded shadow">Submit <i class="material-icons">arrow_forward</i> </button>
+
+
+            <br>
+
+        </form>
+    </div>
+
+    <app-footer-menu></app-footer-menu>
+</div>
