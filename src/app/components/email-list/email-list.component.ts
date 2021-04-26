@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {  Component, OnInit } from '@angular/core';
 import { EmailsService } from '../../services/emails.service';
-import { Emails} from '../../models/emails.model';
+import {  Emails} from '../../models/emails.model';
+import { FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-email-list',
@@ -9,22 +11,26 @@ import { Emails} from '../../models/emails.model';
 })
 export class EmailListComponent implements OnInit {
 
-  Emails:Emails[];
+  Emails : Emails[]; // to get array list 
+ 
+  constructor(public emailService : EmailsService
+    ) {
 
-  constructor(private EmailsService: EmailsService) {}
+
+    }
 
 
 
   ngOnInit() {
 
-    this.EmailsService.getEmailsList().subscribe(data => {
-        this.Emails = data.map(e => {
-          return {
-            id: e.payload.doc.id,
-            ...e.payload.doc.data() as {}
-          } as Emails;
-        })
-      });
+this.emailService.getEmailsList().subscribe(res => {
+  this.Emails = res.map(e => {
+    return {
+      id : e.payload.doc.id,
+      ... e.payload.doc.data() as {} 
+    } as Emails 
+  })
+});  
     }
 
 }

@@ -15,6 +15,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { AddComponyComponent } from './components/add-compony/add-compony.component';
 import { FooterMenuComponent } from './components/footer-menu/footer-menu.component';
 import { HeadMenuComponent } from './components/head-menu/head-menu.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,9 @@ import { HeadMenuComponent } from './components/head-menu/head-menu.component';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule, 
+     FormsModule,
+      ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { Emails } from 'src/app/models/emails.model';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {Emails} from 'src/app/models/emails.model';
 import { EmailsService} from '../../services/emails.service';
 
 @Component({
@@ -10,59 +10,43 @@ import { EmailsService} from '../../services/emails.service';
 })
 export class AddComponyComponent implements OnInit {
 
-  constructor(private EmailService : EmailsService
-  
-  ) { }
+
 
   public companyForm : FormGroup;
 
-public Email : Emails;
+  
+  constructor(public EmailService : EmailsService, public fb: FormBuilder
+    
+    ) {
 
-  ngOnInit(): void {
+this.companyForm = this.fb.group({
+
+  category:[''],
+    companyDetails: [''],
+    companyname: [''],
+    email: [''],
+    location:[''],
+    logo: [''],
+    website:[''],
+phone:[''],
+status : false,
+})
+
+     }
+    
+    
+  
+
+ngOnInit(): void {
+   
   }
 
-  submitCompanyData() {
 
-// this.EmailService.createEmail(Emails)
+ onSubmit() {
 
-    // this.crudApi.AddStudent(this.studentForm.value); // Submit student data using CRUD API
-    // this.toastr.success(this.studentForm.controls['firstName'].value + ' successfully added!'); // Show success message when data is successfully submited
-    // this.ResetForm();  // Reset form when clicked on reset button
-  alert('done');
-  };
-
-// Accessing form control using getters
-get CompanyName() {
-  return this.companyForm.get('CompanyName');
-}
-
-get CompanyEmail() {
-  return this.companyForm.get('CompanyEmail');
-}  
-
-get website() {
-  return this.companyForm.get('website');
-}
-
-get logo() {
-  return this.companyForm.get('logo');
-}
-get phone() {
-  return this.companyForm.get('phone');
-}
-get Industry() {
-  return this.companyForm.get('Industry');
-}
-get location() {
-  return this.companyForm.get('location');
-}
-get companydetails() {
-  return this.companyForm.get('companydetails');
-}
-
-
-
-
-
-
+        debugger;
+        this.EmailService.createEmail(this.companyForm.value).then(() => {
+          alert('Created new item successfully!');        
+        }); 
+    }
 }

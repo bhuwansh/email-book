@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Emails } from '../models/emails.model';
+import { Emails}  from '../models/emails.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,15 +12,26 @@ export class EmailsService {
   //get all email list with details
   getEmailsList(){
     
-    return this.firestore.collection('emails' , x => x.where('status', '==', true)).snapshotChanges(); 
-
+    return this.firestore.collection('emails').snapshotChanges(); 
+// , x => x.where('status', '==', true)
  
   }
 
+
+
+
+
   // add new email with company details 
-  createEmail(Emails : Emails){
-    return this.firestore.collection('emails').add(Emails); 
+  createEmail(email : Emails) {
+    return new Promise<any>((resolve, reject) =>{
+      this.firestore
+        .collection("emails")
+        .add(email)
+        .then(response => { console.log(response) }, error => reject(error));
+    });
   }
+
+
 
   updateEmaildetails(Emails : Emails)
   { delete Emails.id;

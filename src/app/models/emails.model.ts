@@ -1,4 +1,4 @@
-export class Emails {
+export  class Emails {
     id: string;
     category:string;
     companyDetails: string;
@@ -6,5 +6,8 @@ export class Emails {
     email: string;
     location:string;
     logo: string;
-     website:string;
+    website:string;
+phone:string;
+status:boolean;
+address:string;
 }

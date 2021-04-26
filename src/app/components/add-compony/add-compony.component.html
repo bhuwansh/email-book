@@ -34,19 +34,19 @@
         </div>
 
 
-        <form class="example-form" autocomplete="off" formGroup="companyForm" (ngSubmit)="submitCompanyData()">
+        <form autocomplete="off" class="example-form" [formGroup]="companyForm" (ngSubmit)="onSubmit()" novalidate>
 
             <h6 class="subtitle">Company Information</h6>
             <div class="row">
                 <div class="col-12 col-md-6">
                     <div class="form-group float-label active">
-                        <input type="text" formControlName="CompanyName" class="form-control" required="" value="">
+                        <input type="text" formControlName="companyname" class="form-control" required>
                         <label class="form-control-label">Company Name</label>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="form-group float-label active">
-                        <input type="email" class="form-control" formControlName="CompanyEmail" required="" value="">
+                        <input type="email" class="form-control" formControlName="email" required>
                         <label class="form-control-label">Comapony Email</label>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
             <div class="row">
                 <div class="col-12 col-md-6">
                     <div class="form-group float-label active">
-                        <input type="url" class="form-control" formControlName="website" required="" value="">
+                        <input type="url" class="form-control" formControlName="website" required>
                         <label class="form-control-label">website / url</label>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
 
                 <div class="col-12 col-md-6">
                     <div class="form-group float-label active">
-                        <input type="url" class="form-control" formControlName="logo" required="" value="">
+                        <input type="url" class="form-control" formControlName="logo" required>
                         <label class="form-control-label">Logo Image Link</label>
                     </div>
                 </div>
@@ -74,14 +74,14 @@
             <div class="row">
                 <div class="col-12 col-md-4">
                     <div class="form-group float-label active">
-                        <input type="tel" class="form-control" formControlName="phone" required="" value="">
+                        <input type="tel" class="form-control" formControlName="phone" required>
                         <label class="form-control-label">Phone Number</label>
                     </div>
                 </div>
 
                 <div class="col-12 col-md-4">
                     <div class="form-group float-label active">
-                        <select class="form-control" formControlName="Industry">
+                        <select class="form-control" formControlName="category">
                        <option value="0" selected > Select Company type </option>
                        <option> AGRICULTURE AND ALLIED INDUSTRIES                       </option>                  
                        <option> AUTOMOBILES</option>
@@ -384,14 +384,14 @@
 
                 <div class="col-12">
                     <div class="form-group float-label active">
-                        <input type="textarea" class="form-control" required="" formControlName="companydetails" style="min-height: 100px;" value="">
+                        <input type="textarea" class="form-control" required formControlName="companyDetails" style="min-height: 100px;" value="">
                         <label class="form-control-label">Company Details</label>
                     </div>
                 </div>
             </div>
 
-            <!-- [disabled]="!companyForm.valid" -->
-            <button type="submit" class="btn btn-lg btn-default text-white btn-block btn-rounded shadow">Submit <i class="material-icons">arrow_forward</i> </button>
+            <!-- -->
+            <button class="btn btn-lg btn-default text-white btn-block btn-rounded shadow" type="submit" [disabled]="!companyForm.valid">Submit <i class="material-icons">arrow_forward</i> </button>
 
 
             <br>
