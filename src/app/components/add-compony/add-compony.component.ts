@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {Emails} from 'src/app/models/emails.model';
+import {Countries, Emails, Industries} from 'src/app/models/emails.model';
 import { EmailsService} from '../../services/emails.service';
 
 @Component({
@@ -14,7 +14,8 @@ export class AddComponyComponent implements OnInit {
 
   public companyForm : FormGroup;
 
-  
+  Industries : Industries[];
+  Countries : Countries[];
   constructor(public EmailService : EmailsService, public fb: FormBuilder
     
     ) {
@@ -37,7 +38,23 @@ status : false,
     
   
 
-ngOnInit(): void {
+ngOnInit() {
+
+  this.EmailService.getIndustriesList().subscribe(res => {
+    this.Industries = res.map(e => {
+      return {        
+        ... e.payload.doc.data() as {} 
+      } as Industries
+    })
+  });
+
+  this.EmailService.getCountriesList().subscribe(res => {
+    this.Countries = res.map(e => {
+      return {        
+        ... e.payload.doc.data() as {} 
+      } as Countries
+    })
+  });
    
   }
 

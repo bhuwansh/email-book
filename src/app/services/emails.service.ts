@@ -12,10 +12,20 @@ export class EmailsService {
   //get all email list with details
   getEmailsList(){
     
-    return this.firestore.collection('emails').snapshotChanges(); 
+    return this.firestore.collection('emails', x => x.where('status', '==', true)).snapshotChanges(); 
 // , x => x.where('status', '==', true)
  
   }
+
+
+  getIndustriesList(){
+    return this.firestore.collection("industries", x => x.orderBy('id', 'asc')).snapshotChanges();
+  }
+
+  getCountriesList(){
+    return this.firestore.collection("countries", x => x.orderBy('id', 'asc')).snapshotChanges();
+  }
+
 
 
 

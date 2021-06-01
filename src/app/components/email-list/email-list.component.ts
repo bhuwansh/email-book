@@ -1,6 +1,6 @@
 import {  Component, OnInit } from '@angular/core';
 import { EmailsService } from '../../services/emails.service';
-import {  Emails} from '../../models/emails.model';
+import {  Emails, Industries} from '../../models/emails.model';
 import { FormBuilder } from '@angular/forms';
 
 
@@ -12,7 +12,9 @@ import { FormBuilder } from '@angular/forms';
 export class EmailListComponent implements OnInit {
 
   Emails : Emails[]; // to get array list 
- 
+ Industries : Industries[];
+
+
   constructor(public emailService : EmailsService
     ) {
 
@@ -30,7 +32,20 @@ this.emailService.getEmailsList().subscribe(res => {
       ... e.payload.doc.data() as {} 
     } as Emails 
   })
-});  
+});
+
+
+
+this.emailService.getIndustriesList().subscribe(res => {
+  this.Industries = res.map(e => {
+    return {
+      
+      ... e.payload.doc.data() as {} 
+    } as Industries
+  })
+});
+
     }
+    
 
 }

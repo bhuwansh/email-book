@@ -82,8 +82,10 @@
                 <div class="col-12 col-md-4">
                     <div class="form-group float-label active">
                         <select class="form-control" formControlName="category">
-                       <option value="0" selected > Select Company type </option>
-                       <option> AGRICULTURE AND ALLIED INDUSTRIES                       </option>                  
+                       <option value="0" selected > Select Industries </option>
+                      <option *ngFor="let y of Industries"  value="{{y.id}}" >{{y.industry}}</option>
+                      
+                       <!-- <option> AGRICULTURE AND ALLIED INDUSTRIES                       </option>                  
                        <option> AUTOMOBILES</option>
                        <option> AUTO COMPONENTS</option>
                        <option> AVIATION</option>
@@ -123,7 +125,7 @@
                        <option> STEEL</option>
                        <option> TELECOMMUNICATIONS</option>
                        <option> TEXTILES</option>
-                       <option> TOURISM AND HOSPITALITY</option>
+                       <option> TOURISM AND HOSPITALITY</option> -->
 
   </select>
                         <label class="form-control-label">Industries / Companies</label>
@@ -134,7 +136,9 @@
                     <div class="form-group float-label active">
                         <select class="form-control" formControlName="location">
 <option value="0" selected>select Country / Location</option>
-<option>Afghanistan</option>
+
+<option *ngFor="let x of Countries"  value="{{x.id}}" >{{x.name}}</option>
+<!-- <option>Afghanistan</option>
 <option>Albania                 </option>
 <option>Algeria</option>
 <option>Andorra</option>
@@ -372,7 +376,7 @@
 <option>Yemen</option>
 
 <option>Zambia</option>
-<option>Zimbabwe</option>
+<option>Zimbabwe</option> -->
 
   </select>
                         <label class="form-control-label">Select Country</label>

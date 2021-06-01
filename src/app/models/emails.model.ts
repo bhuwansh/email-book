@@ -11,3 +11,15 @@ phone:string;
 status:boolean;
 address:string;
 }
+
+
+export class Industries{
+    id:number;
+    industry:string;
+}
+
+
+export class Countries{
+    id:number;
+    name:string;
+}

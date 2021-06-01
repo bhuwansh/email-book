@@ -15,97 +15,40 @@
     <div class="container">
         <input type="text" class="form-control form-control-lg search my-3" placeholder="Search">
 
-        <h6 class="subtitle">Categories</h6>
+        <h6 class="subtitle">Industries</h6>
 
 
 
         <div class="row">
             <!-- Swiper -->
-            <div class="swiper-container news-slide swiper-container-horizontal">
-                <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-228px, 0px, 0px);">
-                    <div class="swiper-slide swiper-slide-prev" style="width: 228px;">
-                        <div class="card shadow-sm border-0 bg-dark text-white">
-                            <figure class="background" style="background-image: url('../../../assets/img/fresh-orange-juice.jpg');">
+            <div class="swiper-container small-slide swiper-container-horizontal">
+                <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
 
-                            </figure>
+
+                    <div class="swiper-slide " *ngFor="let y of Industries">
+                        <div class="card shadow-sm border-0">
                             <div class="card-body">
-                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
-                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
-                                <p class="text-mute small">By Anand Mangal</p>
+                                <div class="row no-gutters h-100">
+                                    <img src="../../../assets/img/orange.png" alt="" class="small-slide-right">
+                                    <div class="col-8">
+                                        <button class="btn btn-sm btn-link p-0"><i class="material-icons md-18">favorite_outline</i></button>
+                                        <a href="" class="text-dark mb-1 mt-2 h6 d-block">{{y.industry}} </a>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide swiper-slide-active" style="width: 228px;">
-                        <div class="card shadow-sm border-0 bg-dark text-white">
-                            <figure class="background" style="background-image: url('../../../assets/img/orange-juice.jpg');">
 
-                            </figure>
-                            <div class="card-body">
-                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
-                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
-                                <p class="text-mute small">By Anand Mangal</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide-next" style="width: 228px;">
-                        <div class="card shadow-sm border-0 bg-dark text-white">
-                            <figure class="background" style="background-image: url('../../../assets/img/fresh-orange-juice.jpg');">
 
-                            </figure>
-                            <div class="card-body">
-                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
-                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
-                                <p class="text-mute small">By Anand Mangal</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" style="width: 228px;">
-                        <div class="card shadow-sm border-0 bg-dark text-white">
-                            <figure class="background" style="background-image: url('../../../assets/img/orange-juice.jpg');">
-
-                            </figure>
-                            <div class="card-body">
-                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
-                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
-                                <p class="text-mute small">By Anand Mangal</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" style="width: 228px;">
-                        <div class="card shadow-sm border-0 bg-dark text-white">
-                            <figure class="background" style="background-image: url(&quot;img/fresh-orange-juice.jpg&quot;);">
-
-                            </figure>
-                            <div class="card-body">
-                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
-                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
-                                <p class="text-mute small">By Anand Mangal</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide" style="width: 228px;">
-                        <div class="card shadow-sm border-0 bg-dark text-white">
-                            <figure class="background" style="background-image: url(&quot;img/orange-juice.jpg&quot;);">
-
-                            </figure>
-                            <div class="card-body">
-                                <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
-                                <h5 class="small">Multipurpose Juice allows you to grow faster</h5>
-                                <p class="text-mute small">By Anand Mangal</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
         </div>
 
 
-
-        <h6 class="subtitle">Companies Email List </h6>
+        <h6 class="subtitle">Companies/Emails List </h6>
         <div class="row">
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2" *ngFor="let x of Emails">
+            <div class="col-6 col-md-4 col-lg-4 col-xl-3" *ngFor="let x of Emails">
                 <div class="card shadow-sm border-0 mb-4">
                     <div class="card-body">
                         <button class="btn btn-sm btn-link p-0">
@@ -113,7 +56,7 @@
                         </button>
                         <div class="badge badge-primary float-right mt-1 limited-text"><strong>{{x.category}}</strong></div>
                         <figure class="product-image">
-                            <img src="{{x.logo}}" alt="{{x.companyname}}" class="" style="vertical-align: middle;">
+                            <img src="{{x.logo}}" alt="{{x.companyname}}" class="" style="vertical-align: middle; ">
                         </figure>
 
                         <a href="{{x.website}}" target="_blank" class="text-dark mb-1 mt-2 h6 d-block">{{x.companyname}} </a>
@@ -122,7 +65,7 @@
                             {{x.companyDetails}}
                         </p>
 
-                        <h5 class="text-success font-weight-normal mb-0">{{x.location}}</h5>
+                        <h6 class="text-success mb-0">{{x.location}}</h6>
                         <!-- <p class="text-secondary small text-mute mb-0">Send your CV / Email</p> -->
                         <a href="mailto:{{x.email}}" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">markunread</i></a>
                     </div>
@@ -174,7 +117,7 @@
                     <div class="swiper-slide">
                         <div class="card shadow-sm border-0 bg-dark text-white">
                             <figure class="background">
-                                <img src="assets/imgfresh-orange-juice.jpg" alt="">
+                                <img src="../../../assets/imgfresh-orange-juice.jpg" alt="">
                             </figure>
                             <div class="card-body">
                                 <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
@@ -186,7 +129,7 @@
                     <div class="swiper-slide">
                         <div class="card shadow-sm border-0 bg-dark text-white">
                             <figure class="background">
-                                <img src="assets/imgorange-juice.jpg" alt="">
+                                <img src="../../../assets/imgorange-juice.jpg" alt="">
                             </figure>
                             <div class="card-body">
                                 <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
@@ -198,7 +141,7 @@
                     <div class="swiper-slide">
                         <div class="card shadow-sm border-0 bg-dark text-white">
                             <figure class="background">
-                                <img src="assets/imgfresh-orange-juice.jpg" alt="">
+                                <img src="../../../assets/imgfresh-orange-juice.jpg" alt="">
                             </figure>
                             <div class="card-body">
                                 <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
@@ -210,7 +153,7 @@
                     <div class="swiper-slide">
                         <div class="card shadow-sm border-0 bg-dark text-white">
                             <figure class="background">
-                                <img src="assets/imgorange-juice.jpg" alt="">
+                                <img src="../../../assets/imgorange-juice.jpg" alt="">
                             </figure>
                             <div class="card-body">
                                 <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
@@ -222,7 +165,7 @@
                     <div class="swiper-slide">
                         <div class="card shadow-sm border-0 bg-dark text-white">
                             <figure class="background">
-                                <img src="assets/imgfresh-orange-juice.jpg" alt="">
+                                <img src="../../../assets/imgfresh-orange-juice.jpg" alt="">
                             </figure>
                             <div class="card-body">
                                 <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
@@ -234,7 +177,7 @@
                     <div class="swiper-slide">
                         <div class="card shadow-sm border-0 bg-dark text-white">
                             <figure class="background">
-                                <img src="assets/imgorange-juice.jpg" alt="">
+                                <img src="../../../assets/imgorange-juice.jpg" alt="">
                             </figure>
                             <div class="card-body">
                                 <a href="#" class="btn btn-default button-rounded-36 shadow-sm float-bottom-right"><i class="material-icons md-18">arrow_forward</i></a>
