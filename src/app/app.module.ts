@@ -16,6 +16,8 @@ import { AddComponyComponent } from './components/add-compony/add-compony.compon
 import { FooterMenuComponent } from './components/footer-menu/footer-menu.component';
 import { HeadMenuComponent } from './components/head-menu/head-menu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './site-layout/header/header.component';
+import { FooterComponent } from './site-layout/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegistrationComponent,
     AddComponyComponent,
     FooterMenuComponent,
-    HeadMenuComponent
+    HeadMenuComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
